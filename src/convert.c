@@ -2697,7 +2697,7 @@ herr_t H5Tconvert_with_warning(hid_t src_type_id, hid_t dest_type_id, size_t nel
   char* issue_string = R_alloc(1, 300);
   int issue_res = get_issue_string(conv_op_data, issue_string, 300);
   if(issue_res) {
-    warning(issue_string);
+    warning("%s", issue_string);
   }
   return(herr);
 }
